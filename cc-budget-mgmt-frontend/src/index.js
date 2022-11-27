@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import TestAxios from './testAislado/TestAxios';
+import LoginFormik from './views/LoginFormik';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    
+    <TestAxios /> 
+    {/* aqui puse mi header * /}  
+    {/* de aqui en adelante puedo llamar los siguientes componentes */ }
+    <LoginFormik />
+
   </React.StrictMode>
 );
 
