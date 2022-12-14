@@ -4,17 +4,25 @@ import './index.css';
 import TestAxios from './testAislado/TestAxios';
 import LoginFormik from './views/LoginFormik';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import { store } from './store/store';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <BrowserRouter>
   <React.StrictMode>
-    
-    <TestAxios /> 
-    {/* aqui puse mi header * /}  
+    <Provider store={store}>
+    {/*<TestAxios /> */}
+    {/* aqui puse mi header */}  
     {/* de aqui en adelante puedo llamar los siguientes componentes */ }
-    <LoginFormik />
-
+    {/*<LoginFormik /> */}
+      <App />
+    </Provider>
   </React.StrictMode>
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
